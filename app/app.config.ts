@@ -4,7 +4,7 @@ export default defineAppConfig({
     sourceGithub: 'https://github.com/aliozgur/git101_book',
     sourceUrl: 'https://aliozgur.gitbooks.io/git101/content/',
     github: 'https://github.com/atlasyigitaydin',
-    repoGithub: '',
+    repoGithub: 'https://github.com/atlasyigitaydin/git101',
   },
   icon: {
     aliases: {
