@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+@source "../../../content/**/*";
+
+body {
+  @apply dark:bg-neutral-900 bg-neutral-100 overflow-y-auto;
+}
+
+html {
+  @apply scroll-smooth [&::-webkit-scrollbar]:w-1
+  [&::-webkit-scrollbar-track]:rounded-none
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:rounded-none
+  [&::-webkit-scrollbar-thumb]:bg-[#D44A2F]
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-[#D44A2F];
+}
+
+
+.prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a, button a) {
+  @apply text-[#cf3d21] dark:text-[#D44A2F];
+}

@@ -1,1 +1,20 @@
-/_book/
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+.data
+
+# Yarn
+.yarn/cache
+.yarn/*state*
+
+# Local History
+.history
+
+# Firebase
+.firebase
