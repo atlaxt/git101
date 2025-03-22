@@ -1,7 +1,14 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/eslint', '@nuxtjs/color-mode', '@pinia/nuxt'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/icon',
+    '@nuxt/eslint',
+    '@nuxtjs/color-mode',
+    '@pinia/nuxt',
+    '@nuxtjs/sitemap',
+  ],
 
   css: ['assets/css/main.css'],
   colorMode: { classSuffix: '' },
@@ -11,7 +18,6 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: {
-            // https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
             dark: 'github-dark',
             default: 'github-light',
           },
@@ -19,10 +25,13 @@ export default defineNuxtConfig({
       },
     },
   },
+
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: '2025-02-19',
 
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })
