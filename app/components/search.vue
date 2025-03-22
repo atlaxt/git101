@@ -84,9 +84,9 @@ onMounted(() => {
 
     <div
       v-if="appStore.searchModalIsOpen"
-      class="fixed h-screen inset-0 bg-neutral-700/50 flex justify-center lg:items-center items-end z-[99999999]"
+      class="fixed h-screen inset-0 bg-neutral-700/50 flex justify-center lg:items-center items-start z-[99999999]"
     >
-      <div class="w-full max-w-3xl flex flex-col lg:h-[70vh] h-5/6 bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-6">
+      <div class="w-full max-w-3xl flex flex-col lg:h-[70vh] h-full bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-6">
         <div class="flex items-center justify-between mb-4">
           <h3 class="text-xl font-semibold dark:text-neutral-200">
             İçeriklerde Ara
