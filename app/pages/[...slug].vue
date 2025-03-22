@@ -15,8 +15,6 @@ contentStore.setSections(_page.value)
 const { data: _navigation } = useAsyncData('navigation', () =>
   queryCollectionNavigation('content'))
 contentStore.setNavigation(_navigation.value)
-
-useSeoMeta(page.value?.seo || {})
 </script>
 
 <template>
