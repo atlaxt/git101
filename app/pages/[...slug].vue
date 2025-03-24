@@ -10,11 +10,24 @@ const { data: _page } = await useAsyncData(`page-${route.params.slug}`, () => {
   return queryCollection('content').path(route.path).first()
 })
 page.value = _page.value
-contentStore.setSections(_page.value)
+// contentStore.setSections(_page.value)
 
 const { data: _navigation } = useAsyncData('navigation', () =>
   queryCollectionNavigation('content'))
-contentStore.setNavigation(_navigation.value)
+// contentStore.setNavigation(_navigation.value)
+
+watch(_page, (newPage) => {
+  if (newPage) {
+    page.value = newPage
+    contentStore.setSections(newPage)
+  }
+}, { immediate: true })
+
+watch(_navigation, (newNav) => {
+  if (newNav) {
+    contentStore.setNavigation(newNav)
+  }
+}, { immediate: true })
 </script>
 
 <template>

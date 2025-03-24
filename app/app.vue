@@ -34,7 +34,6 @@ useSeoMeta({
 <template>
   <div class="sm:pb-10 nunito-sans">
     <Html lang="tr" />
-    <NuxtLoadingIndicator />
     <AppNavbar />
     <NuxtPage />
   </div>
