@@ -54,6 +54,7 @@ onBeforeUnmount(() => {
     "
   >
     <div v-if="contentStore.navigation" class="w-full text-left flex text-wrap flex-col gap-3">
+      <a href="/" class="text-[#cf3d21] dark:text-[#D44A2F] text-lg"> Önsöz </a>
       <div v-for="navigate in contentStore.navigation" :key="navigate.path" class="text-wrap flex flex-col">
         <p class="text-[#cf3d21] dark:text-[#D44A2F] text-lg">
           {{ navigate.title }}

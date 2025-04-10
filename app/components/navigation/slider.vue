@@ -17,7 +17,7 @@ watch(() => appStore.searchModalIsOpen, (isOpen) => {
       <Search />
       <ColorModeSwitch class="mt-2" />
       <button class=" pt-2" @click="appStore.silderIsOpen = !appStore.silderIsOpen">
-        <Icon name="heroicons-outline:menu-alt-3" class="text-2xl" />
+        <Icon name="heroicons-outline:menu-alt-3" class="text-2xl dark:text-white text-black" />
       </button>
     </div>
 
@@ -26,7 +26,15 @@ watch(() => appStore.searchModalIsOpen, (isOpen) => {
       :class="appStore.silderIsOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <div class="flex h-screen flex-col p-3 space-y-4 !bg-white dark:!bg-neutral-900">
-        <div class="flex flex-row items-center justify-end">
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex dark:font-normal font-semibold doto flex-row items-center gap-2">
+            <img src="../../assets/git.png" class="lg:h-10 h-6">
+            <div class="flex flex-col">
+              <p class="lg:text-xl text-lg dark:text-white">
+                {{ "Git101" }}
+              </p>
+            </div>
+          </div>
           <button class="self-end text-gray-700 dark:text-gray-200 text-2xl" @click="appStore.silderIsOpen = false">
             <Icon name="heroicons-outline:x" />
           </button>

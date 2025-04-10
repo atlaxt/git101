@@ -71,7 +71,7 @@ onMounted(() => {
 <template>
   <div>
     <button
-      class="hover:text-[#cf3d21] hover:dark:text-[#D44A2F] cursor-pointer flex flex-row items-center
+      class="hover:text-[#cf3d21] hover:dark:text-[#D44A2F] dark:text-white text-black cursor-pointer flex flex-row items-center
       border-dashed rounded gap-4 py-2 lg:px-4 lg:border border-neutral-400 dark:border-neutral-500
       "
       @click="appStore.searchModalIsOpen = true"
