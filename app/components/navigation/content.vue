@@ -11,6 +11,14 @@ onMounted(() => {
   currentPageNavigationIndex.value = contentStore.contentNavigationMap.findIndex(item => item.stem === contentStore.page.stem)
   prevPage.value = contentStore.contentNavigationMap[currentPageNavigationIndex.value - 1]
   nextPage.value = contentStore.contentNavigationMap[currentPageNavigationIndex.value + 1]
+
+  if (currentPageNavigationIndex.value === 0) {
+    prevPage.value = {
+      path: '/',
+      stem: 'index',
+      title: 'Önsöz',
+    }
+  }
 })
 </script>
 
