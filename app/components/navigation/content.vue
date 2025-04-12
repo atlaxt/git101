@@ -15,7 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full flex lg:flex-row flex-col justify-between lg:h-24 lg:gap-12 gap-4">
+  <div class="w-full flex lg:flex-row flex-col justify-between lg:h-32 lg:gap-12 gap-4">
     <NuxtLink
       class=" flex w-full flex-col rounded justify-around gap-4 border border-dashed py-2 px-4 "
       :class="{
