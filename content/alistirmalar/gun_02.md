@@ -63,5 +63,3 @@ cd pg_00.git
 
 git status
 ```
-
-[&lt;&lt; Geri](gun_01.md) \| [İleri &gt;&gt;](gun_03.md)

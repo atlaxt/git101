@@ -120,5 +120,3 @@ git stash
 ```
 
 **Soru-1:** stash komutunu çalıştırmadan önceki dosya içeriğinizi nasıl geri getirebilirsiniz?
-
-[&lt;&lt; Geri](gun_07.md) \| [İleri &gt;&gt;](gun_09.md)

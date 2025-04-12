@@ -110,5 +110,3 @@ git merge master
 **Soru-2:** git mergetool komutunu çalıştırın ve bu komutun ne işe yaradığını yorumlayın.
 
 **Soru-3:** merge/diff işlemlerinde Windows üzerinde WinMerge uygulamasının kullanılması için Git’de nasıl bir konfigürasyon yapmanız gerektiğini araştırın. \(OSX kullanıyorsanız SourceGear DiffMerge, Linux kullanıyorsanız da KDiff3 için araştırmanızı yapabilirsiniz\)
-
-[&lt;&lt; Geri](gun_08.md) \| [İleri &gt;&gt;](gun_10.md)

@@ -49,5 +49,3 @@ Git'in commit mesajları ve diğer metin düzenleme işlemler için varsayılan 
 ## Alıştırma - 3
 
 Git’in her bir commit işlemi için otomatik ürettiği hash değerinin ne olduğunu araştırın.
-
-[&lt;&lt; Geri](gun_04.md) \| [İleri &gt;&gt;](gun_06.md)

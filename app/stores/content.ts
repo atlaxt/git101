@@ -5,6 +5,7 @@ export const useContentStore = defineStore('contents', () => {
   const page = ref()
   const navigation = ref<ContentNavigationItem[]>([])
   const sections = ref<Section[]>([])
+  const contentNavigationMap = ref<{ path: string, stem: string, title: string }[]>([])
   const sort = ref<{ stem: string, subStems: string[] }[]>([
     {
       stem: 'git_kurulumu',
@@ -102,6 +103,16 @@ export const useContentStore = defineStore('contents', () => {
               return aIndex - bIndex
             }) ?? []
 
+          sortedChildren.forEach((sn) => {
+            if (sn.stem && sn.path && sn.title) {
+              contentNavigationMap.value.push({
+                path: sn.path,
+                stem: sn.stem,
+                title: sn.title,
+              })
+            }
+          })
+
           return {
             ...n,
             title: n.stem?.replace(/_/g, ' ') ?? '',
@@ -155,6 +166,7 @@ export const useContentStore = defineStore('contents', () => {
     page,
     navigation,
     sections,
+    contentNavigationMap,
     setNavigation,
     setSections,
   }

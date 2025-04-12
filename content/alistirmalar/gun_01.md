@@ -54,5 +54,3 @@ Kopyalama işlemini alternatif olarak git clone komutu ile komut satırı ara y�
 
 * Kullanıcı adı ve şifre bilgisinin bu komutta nasıl geçileceğini
 * Klonlama sırasında karşılaşabileceğiniz fatal: index-pack failed şeklindeki hatayı gidermek için ne yapılması gerektiğini araştırabilir
-
-[İleri &gt;&gt;](gun_02.md)

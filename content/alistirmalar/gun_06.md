@@ -52,5 +52,3 @@ git push
 **Soru-3:** Commit hash değerinin ilk 7 karakterini kullanmak neden yeterli?
 
 **Soru-4:** git reset ile git revert komutları arasındaki fark nedir?
-
-[&lt;&lt; Geri](gun_05.md) \| [İleri &gt;&gt;](gun_07.md)

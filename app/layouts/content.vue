@@ -8,6 +8,7 @@
       <main class="">
         <slot />
       </main>
+      <NavigationContent class="mb-4 mt-12" />
     </div>
 
     <div class="w-60 z-50 md:hidden hidden lg:flex flex-col">

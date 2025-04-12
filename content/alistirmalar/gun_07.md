@@ -67,5 +67,3 @@ git push
 **Soru-2:** Oluşturduğunuz v0.1 isimli tag'ı nasıl silersiniz?
 
 **Soru-3:** Oluşturduğunuz tag’ları uzak deponuza nasıl gönderebilirsiniz?
-
-[&lt;&lt; Geri](gun_06.md) \| [İleri &gt;&gt;](gun_08.md)

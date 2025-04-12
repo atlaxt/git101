@@ -98,5 +98,3 @@ git push <uzak depo kısa yolu> -- tags
 ```
 
 **Soru-1:** push işlemi sırasında bir çakışma oluşabilir mi?
-
-[&lt;&lt; Geri](gun_10.md) \| [Ana Sayfa](./)

@@ -171,5 +171,3 @@ git status
 **Soru-1:** Dosyanızda yaptığınız değişiklik kayboldu mu?
 
 **Soru-2:** Dosyanızı değişiklik yapılmadan önceki hale getirmek için hangi komutu kullanmanız lazım? \(İPUCU: Son durumda dosyanız untracked durumda yani Staging Area'da değil\)
-
-[&lt;&lt; Geri](gun_03.md) \| [İleri &gt;&gt;](gun_05.md)
