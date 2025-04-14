@@ -25,10 +25,11 @@ onMounted(() => {
 <template>
   <div class="w-full flex lg:flex-row flex-col justify-between lg:h-32 lg:gap-12 gap-4">
     <NuxtLink
+      v-if="prevPage?.path"
       class=" flex w-full flex-col rounded justify-around gap-4 border border-dashed py-2 px-4 "
       :class="{
-        'text-[#cf3d21] dark:text-[#D44A2F]': prevCardHover && prevPage?.path,
-        'dark:text-gray-400': !prevCardHover && prevPage?.path,
+        'text-[#cf3d21] dark:text-[#D44A2F]': prevCardHover,
+        'dark:text-gray-400': !prevCardHover,
       }"
       :to="prevPage?.path"
       @mouseover="prevCardHover = true"
@@ -39,7 +40,7 @@ onMounted(() => {
         class="border rounded-full flex items-center justify-center w-7 h-7"
         :class="{
           '': prevCardHover,
-          'dark:border-gray-400 border-gray-700': !prevCardHover && prevPage?.path,
+          'dark:border-gray-400 border-gray-700': !prevCardHover,
         }"
       >
         <Icon name="heroicons:arrow-left" class="text-lg" />
@@ -48,7 +49,7 @@ onMounted(() => {
     </NuxtLink>
 
     <NuxtLink
-      class=" flex w-full flex-col rounded justify-around items-end gap-4 border border-dashed py-2 px-4 "
+      class="flex w-full flex-col rounded justify-around items-end gap-4 border border-dashed py-2 px-4 "
       :class="{
         'text-[#cf3d21] dark:text-[#D44A2F]': nextCardHover && nextPage?.path,
         'dark:text-gray-400': !nextCardHover && nextPage?.path,
