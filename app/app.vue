@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { LayoutKey } from '#build/types/layouts'
+
 useHead({
   title: 'Türkçe Git101 - Git ve Versiyon Kontrolü Eğitimi',
   meta: [
@@ -35,7 +37,9 @@ useSeoMeta({
   <div class="sm:pb-10 nunito-sans">
     <Html lang="tr" />
     <AppNavbar />
-    <NuxtPage />
+    <NuxtLayout name="content">
+      <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
+    </NuxtLayout>
   </div>
 </template>
 
@@ -47,5 +51,18 @@ useSeoMeta({
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(1rem);
 }
 </style>
