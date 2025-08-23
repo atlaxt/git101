@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { LayoutKey } from '#build/types/layouts'
+
 const route = useRoute()
 const contentStore = useContentStore()
 
@@ -27,9 +29,11 @@ watch(_navigation, (newNav) => {
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="prose dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 min-w-full"
-  />
+  <NuxtLayout :name="page?.layout as LayoutKey || 'default'">
+    <ContentRenderer
+      v-if="page"
+      :value="page"
+      class="prose dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 min-w-full"
+    />
+  </NuxtLayout>
 </template>

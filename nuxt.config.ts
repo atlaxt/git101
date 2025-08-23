@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
+    '@nuxt/fonts',
   ],
 
   css: ['assets/css/main.css'],

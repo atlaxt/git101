@@ -17,6 +17,9 @@ html {
   dark:[&::-webkit-scrollbar-thumb]:bg-[#D44A2F];
 }
 
+div {
+  font-family: Inter, sans-serif;
+}
 
 .prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a, button a) {
   @apply text-[#cf3d21] dark:text-[#D44A2F];

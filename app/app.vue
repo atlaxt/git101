@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { LayoutKey } from '#build/types/layouts'
-
 useHead({
   title: 'Türkçe Git101 - Git ve Versiyon Kontrolü Eğitimi',
   meta: [
@@ -37,32 +35,6 @@ useSeoMeta({
   <div class="sm:pb-10 nunito-sans">
     <Html lang="tr" />
     <AppNavbar />
-    <NuxtLayout name="content">
-      <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
-    </NuxtLayout>
+    <NuxtPage />
   </div>
 </template>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
-
-.nunito-sans {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
-}
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(-1rem);
-}
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(1rem);
-}
-</style>
