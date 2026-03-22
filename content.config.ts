@@ -7,6 +7,8 @@ export default defineContentConfig({
       source: '**',
       schema: z.object({
         layout: z.string(),
+        title: z.string().optional(),
+        description: z.string().optional(),
       }),
     }),
   },

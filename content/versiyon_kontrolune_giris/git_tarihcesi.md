@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git'in kısa tarihçesi: Linux kernel'dan doğan dağıtık versiyon kontrol sisteminin hikayesi Türkçe anlatımıyla."
 ---
 
 # Kısa Git Tarihçesi

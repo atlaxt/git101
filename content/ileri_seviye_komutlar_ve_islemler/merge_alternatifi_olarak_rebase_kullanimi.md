@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git rebase nedir ve merge'e alternatif nasıl kullanılır? Avantajları ve riskleri Türkçe açıklamasıyla öğrenin."
 ---
 
 # Merge Alternatifi Olarak Rebase Kullanımı

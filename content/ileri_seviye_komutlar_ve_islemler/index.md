@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git ileri seviye komutlar: rebase, diff, çakışma çözme ve değişiklikleri geri alma işlemlerini Türkçe öğrenin."
 ---
 
 # İleri Seviye Komutlar ve İşlemler

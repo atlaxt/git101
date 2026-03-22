@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git branching nedir ve çalışma şeklinizi nasıl değiştirir? Türkçe detaylı açıklama ve örneklerle öğrenin."
 ---
 
 # Branching Çalışma Şeklinizi Değiştirebilir

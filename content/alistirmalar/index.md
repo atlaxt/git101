@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "11 günlük Git alıştırmaları serisi. Temel kurulumdan ileri seviye işbirliğine kadar pratik Git egzersizleri."
 ---
 
 # Git ile Versiyon Kontrolü - Günlük Alıştırmalar ile Tekrar

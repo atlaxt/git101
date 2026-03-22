@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git pull ve fetch ile remote değişiklikleri yerel reponuza nasıl entegre edersiniz? Türkçe rehber."
 ---
 
 # Remote Değişiklikleri Entegre Etmek

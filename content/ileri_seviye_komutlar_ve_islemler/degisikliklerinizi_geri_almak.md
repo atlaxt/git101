@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git revert, reset ve checkout ile yaptığınız değişiklikleri nasıl geri alırsınız? Türkçe rehber."
 ---
 
 # Değişikliklerinizi Geri Almak

@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Versiyon kontrolü nedir? Git ile dosya değişikliklerini takip etmenin ne anlama geldiğini Türkçe öğrenin."
 ---
 
 # Versiyon  Kontrolü Nedir?

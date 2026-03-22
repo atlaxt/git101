@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git merge nedir? Branch'leri birleştirme ve merge conflict çözme yöntemlerini Türkçe öğrenin."
 ---
 
 # Değişiklikleri Merge Etmek

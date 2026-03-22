@@ -12,7 +12,7 @@
         class="flex items-center gap-2.5 text-neutral-900 dark:text-neutral-100 hover:opacity-75 transition-opacity"
         @click="navigateTo('/')"
       >
-        <img src="../assets/git.png" class="h-7 w-auto">
+        <img src="../assets/git.png" class="h-7 w-auto" alt="Git101 Logo">
         <span class="font-semibold text-base tracking-tight">Git101</span>
       </button>
 

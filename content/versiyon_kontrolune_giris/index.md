@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git ve versiyon kontrolüne giriş: versiyon kontrolünün ne olduğu, neden gerekli olduğu ve Git ile nasıl çalışmaya başlayacağınızı Türkçe öğrenin."
 ---
 
 # Versiyon Kontrolüne Giriş

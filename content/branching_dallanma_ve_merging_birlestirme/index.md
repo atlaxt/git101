@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git branching ve merging nedir? Dal oluşturma, birleştirme, çakışmaları çözme ve iş akışlarını Türkçe öğrenin."
 ---
 
 # Branching \(Dallanma\) ve Merging \(Birleştirme\)

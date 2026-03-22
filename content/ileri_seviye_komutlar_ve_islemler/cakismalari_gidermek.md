@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git merge conflict nedir ve nasıl çözülür? Türkçe adım adım çakışma çözme rehberi."
 ---
 
 # Çakışmaları Gidermek

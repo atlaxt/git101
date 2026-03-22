@@ -8,11 +8,14 @@ useHead({
     { property: 'og:description', content: 'Git101 ile Git ve versiyon kontrolünü Türkçe öğrenin. Kapsamlı ve pratik içeriklerle Git uzmanı olun.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:locale', content: 'tr_TR' },
-    { property: 'og:image', content: 'https://git101.atlasyigitaydin.com/seo-card.png' },
-    { name: 'twitter:image', content: 'https://git101.atlasyigitaydin.com/seo-card.png' },
+    { property: 'og:site_name', content: 'Git101 - Türkçe Git Eğitimi' },
+    { property: 'og:image', content: 'https://git101.atlaxt.me/seo-card.png' },
+    { name: 'twitter:image', content: 'https://git101.atlaxt.me/seo-card.png' },
   ],
   link: [
-    { rel: 'canonical', href: 'https://git101.atlasyigitaydin.com' },
+    { rel: 'canonical', href: 'https://git101.atlaxt.me' },
+    { rel: 'alternate', hreflang: 'tr', href: 'https://git101.atlaxt.me' },
+    { rel: 'alternate', hreflang: 'x-default', href: 'https://git101.atlaxt.me' },
   ],
 })
 
@@ -21,19 +24,33 @@ useSeoMeta({
   description: 'Git101 ile Git ve versiyon kontrolünü öğrenin. Branching, merging, remote repository yönetimi ve ileri seviye Git komutlarını kapsamlı içeriklerle keşfedin.',
   ogTitle: 'Türkçe Git101 - Git ve Versiyon Kontrolü Eğitimi',
   ogDescription: 'Git101 ile Git ve versiyon kontrolünü Türkçe öğrenin. Kapsamlı ve pratik içeriklerle Git uzmanı olun.',
-  ogUrl: 'https://git101.atlasyigitaydin.com',
+  ogUrl: 'https://git101.atlaxt.me',
   ogType: 'website',
   twitterTitle: 'Türkçe Git101 - Git ve Versiyon Kontrolü Eğitimi',
   twitterDescription: 'Git101 ile Git ve versiyon kontrolünü Türkçe öğrenin.',
   twitterCard: 'summary_large_image',
-  ogImage: 'https://git101.atlasyigitaydin.com/seo-card.png',
-  twitterImage: 'https://git101.atlasyigitaydin.com/seo-card.png',
+  ogImage: 'https://git101.atlaxt.me/seo-card.png',
+  twitterImage: 'https://git101.atlaxt.me/seo-card.png',
 })
 </script>
 
 <template>
   <div class="sm:pb-10">
     <Html lang="tr" />
+    <Head>
+      <Script type="application/ld+json">
+        {{
+          JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Git101 - Türkçe Git Eğitimi',
+            url: 'https://git101.atlaxt.me',
+            inLanguage: 'tr',
+            description: 'Git ve versiyon kontrolünü Türkçe öğrenin.',
+          })
+        }}
+      </Script>
+    </Head>
     <AppNavbar />
     <NuxtPage />
   </div>

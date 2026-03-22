@@ -1,8 +1,8 @@
 <template>
   <div class="w-full max-w-[1400px] mx-auto flex flex-row min-h-screen px-6">
     <!-- Left sidebar -->
-    <aside class="lg:block md:block hidden w-64 xl:w-72 flex-shrink-0">
-      <Navigation class="sticky top-14 h-[calc(100vh-3.5rem)] pt-8 pb-6 pr-6" />
+    <aside class="lg:block md:block hidden w-64 xl:w-72 flex-shrink-0 sticky top-14 self-start h-[calc(100vh-3.5rem)]">
+      <Navigation class="h-full pt-8 pb-6 pr-6" />
     </aside>
 
     <!-- Main content -->
@@ -16,8 +16,8 @@
     </div>
 
     <!-- Right TOC sidebar -->
-    <aside class="w-52 xl:w-56 flex-shrink-0 md:hidden hidden lg:flex flex-col">
-      <NavigationSections class="sticky top-14 pt-8 pb-6 pl-6 h-[calc(100vh-3.5rem)] overflow-hidden">
+    <aside class="w-52 xl:w-56 flex-shrink-0 md:hidden hidden lg:flex flex-col sticky top-14 self-start h-[calc(100vh-3.5rem)]">
+      <NavigationSections class="h-full pt-8 pb-6 pl-6 overflow-hidden">
         <div class="mt-6 pt-6 border-t border-neutral-100 dark:border-neutral-800 flex flex-col gap-3">
           <CardCommunity />
           <CardBook />

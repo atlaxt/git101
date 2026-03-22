@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "GitHub, GitLab ve Bitbucket karşılaştırması. Hangi çevrimiçi Git servisi size uygun? Türkçe rehber."
 ---
 
 # Git Servisleri

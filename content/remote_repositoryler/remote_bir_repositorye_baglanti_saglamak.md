@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git remote repository'ye bağlantı nasıl kurulur? git remote add ve clone komutlarını Türkçe öğrenin."
 ---
 
 # Remote Bir Repository'ye Bağlantı Sağlamak

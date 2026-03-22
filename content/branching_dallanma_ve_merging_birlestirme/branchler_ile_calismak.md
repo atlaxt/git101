@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git branch oluşturma, silme ve branch'ler arasında geçiş yapma komutlarını Türkçe öğrenin."
 ---
 
 # Branch'ler İle Çalışmak

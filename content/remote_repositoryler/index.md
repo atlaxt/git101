@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git remote repository yönetimi: uzak depo bağlantısı kurma, push, pull ve fetch işlemlerini Türkçe öğrenin."
 ---
 
 # Remote Repository'ler

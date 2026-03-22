@@ -34,6 +34,15 @@ export default defineNuxtConfig({
     },
   },
 
+  site: {
+    url: 'https://git101.atlaxt.me',
+  },
+
+  sitemap: {
+    strictNuxtContentPaths: true,
+    exclude: ['/__nuxt_content/**'],
+  },
+
   future: {
     compatibilityVersion: 4,
   },

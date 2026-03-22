@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git kurulumu nasıl yapılır? Windows, macOS ve Linux için Git kurulum rehberi Türkçe adım adım açıklamasıyla."
 ---
 
 # Git İle Çalışmaya Başlamak

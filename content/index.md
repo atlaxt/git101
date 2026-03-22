@@ -1,8 +1,9 @@
 ---
 layout: content
+description: "Git ve versiyon kontrolünü Türkçe öğrenin. Branching, merging, remote repository yönetimi ve ileri seviye Git komutlarını kapsamlı içeriklerle keşfedin."
 ---
 
-# Önsöz
+# Git Türkçe Eğitimi — Git ve Versiyon Kontrolü
 
 Bu kitapta son 4-5 yılda yazılım geliştiricilerin ve yazılım şirketlerinin vazgeçilmez araçlarından biri olan ve benim de bir yazılım geliştirici olarak çok başarılı bulduğum Git Dağıtık Versiyon Kontrol Sistemini \(Distributed Version Control System\) örnekler ile ele alarak size tanıtmaya çalışacağım.
 

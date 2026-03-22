@@ -1,5 +1,6 @@
 ---
 layout: content
+description: "Git ile çalışmaya nasıl başlanır? Komut satırı ve görsel arayüz seçeneklerini Türkçe açıklamasıyla öğrenin."
 ---
 
 # Git İle Çalışmaya Başlamak
