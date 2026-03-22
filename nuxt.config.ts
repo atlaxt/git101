@@ -9,10 +9,17 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
     '@nuxt/fonts',
+    '@vercel/analytics',
   ],
 
   css: ['assets/css/main.css'],
   colorMode: { classSuffix: '' },
+
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google' },
+    ],
+  },
 
   content: {
     build: {

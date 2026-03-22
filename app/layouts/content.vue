@@ -1,23 +1,28 @@
 <template>
-  <div class="w-full flex flex-row justify-center">
-    <div class="max-w-full lg:block md:block hidden">
-      <Navigation class="flex sticky top-24 mx-8 h-[calc(85vh)]" />
-    </div>
+  <div class="w-full max-w-[1400px] mx-auto flex flex-row min-h-screen px-6">
+    <!-- Left sidebar -->
+    <aside class="lg:block md:block hidden w-64 xl:w-72 flex-shrink-0">
+      <Navigation class="sticky top-14 h-[calc(100vh-3.5rem)] pt-8 pb-6 pr-6" />
+    </aside>
 
-    <div class="lg:px-0 md:px-0 px-4 border-white lg:mt-6 md:mt-3 mt-3 sm:mt-0 min-h-screen lg:max-w-4xl w-full">
-      <main class="">
+    <!-- Main content -->
+    <div class="flex-1 min-w-0 pt-8 pb-16 lg:px-8 xl:px-12">
+      <main>
         <slot />
       </main>
-      <NavigationContent class="mb-4 mt-12" />
+      <div class="mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800">
+        <NavigationContent />
+      </div>
     </div>
 
-    <div class="w-60 z-50 md:hidden hidden lg:flex flex-col">
-      <NavigationSections class="h-[calc(85vh)] flex justify-start sticky top-24 mx-8">
-        <div class="my-4 w-full border-t border-dashed dark:border-neutral-700 border-neutral-400" />
-        <CardCommunity />
-        <div class="my-4 w-full " />
-        <CardBook />
+    <!-- Right TOC sidebar -->
+    <aside class="w-52 xl:w-56 flex-shrink-0 md:hidden hidden lg:flex flex-col">
+      <NavigationSections class="sticky top-14 pt-8 pb-6 pl-6 h-[calc(100vh-3.5rem)] overflow-hidden">
+        <div class="mt-6 pt-6 border-t border-neutral-100 dark:border-neutral-800 flex flex-col gap-3">
+          <CardCommunity />
+          <CardBook />
+        </div>
       </NavigationSections>
-    </div>
+    </aside>
   </div>
 </template>

@@ -23,6 +23,7 @@
     "@pinia/nuxt": "0.10.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.9",
+    "@vercel/analytics": "^2.0.1",
     "fuse.js": "^7.1.0",
     "nuxt": "^3.16.1",
     "pinia": "^3.0.1",

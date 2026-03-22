@@ -6,10 +6,12 @@ function scrollToTop() {
 </script>
 
 <template>
-  <div class="flex flex-row gap-2 dark:text-neutral-200 text-neutral-800 items-center cursor-pointer" @click="scrollToTop">
-    <Icon name="heroicons:arrow-up" class="text-lg flex-shrink-0 w-6 h-6" />
-    <p class="truncate">
-      {{ contentStore.page.title }}
-    </p>
-  </div>
+  <button
+    class="flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400
+    hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors group text-left"
+    @click="scrollToTop"
+  >
+    <Icon name="heroicons:arrow-up" class="w-3 h-3 flex-shrink-0 group-hover:-translate-y-0.5 transition-transform" />
+    <span class="truncate font-medium">{{ contentStore.page.title }}</span>
+  </button>
 </template>

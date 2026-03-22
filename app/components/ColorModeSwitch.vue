@@ -7,23 +7,13 @@ const onClick = () => (!isDark.value ? (colorMode.preference = 'dark') : (colorM
 <template>
   <button
     aria-label="Color Mode"
-    class="cursor-pointer w-5 hover:text-[#cf3d21] hover:dark:text-[#D44A2F]"
+    class="flex items-center justify-center w-8 h-8 rounded-lg
+    text-neutral-500 dark:text-neutral-400
+    hover:text-neutral-900 dark:hover:text-neutral-100
+    hover:bg-neutral-100 dark:hover:bg-neutral-800
+    transition-all cursor-pointer"
     @click="onClick"
   >
-    <Icon :name="`heroicons:${isDark ? 'sun' : 'moon'}`" />
-    <!-- <ColorScheme placeholder="...">
-      <template v-if="colorMode.value === 'dark'">
-        <Icon
-          name="dark-mode"
-          class="text-xl"
-        />
-      </template>
-      <template v-else>
-        <Icon
-          name="light-mode"
-          class="text-xl"
-        />
-      </template>
-    </ColorScheme> -->
+    <Icon :name="`heroicons:${isDark ? 'sun' : 'moon'}`" class="w-4 h-4" />
   </button>
 </template>

@@ -58,39 +58,47 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col overflow-auto dark:text-white capitalize text-sm">
-    <div v-if="contentStore.sections" class="text-left flex flex-col gap-3">
+  <div class="flex flex-col overflow-auto
+    [&::-webkit-scrollbar]:w-[3px]
+    [&::-webkit-scrollbar-track]:bg-transparent
+    [&::-webkit-scrollbar-thumb]:rounded-full
+    [&::-webkit-scrollbar-thumb]:bg-neutral-200
+    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700"
+  >
+    <div v-if="contentStore.sections" class="flex flex-col gap-1">
       <NavigationSectionsTop />
-      <div v-if="contentStore.sections.length > 0" class="flex flex-col gap-2">
-        <div class="w-full border-t border-dashed dark:border-neutral-700 border-neutral-400" />
-        <NavigationSectionsHeader title="Bu Sayfanın İçeriği" class="mt-2" />
-      </div>
-      <div v-for="section in contentStore.sections" :key="section.id">
-        <div class="flex flex-col truncate gap-2">
-          <a
-            :class="{
-              'text-[#cf3d21] dark:text-[#D44A2F]': currentSections.includes(section.id),
-              'dark:text-white text-black opacity-70 hover:opacity-100 ': !currentSections.includes(section.id),
-            }"
-            class="cursor-pointer text-wrap animation-all duration-100"
-            @click.prevent="scrollToSection(section.id)"
-          >
-            {{ section.label }}
-          </a>
-          <a
-            v-for="(subSection, key) in section.subSections"
-            :key="key"
-            :class="{
-              'text-[#cf3d21] dark:text-[#D44A2F]': currentSections.includes(subSection.id),
-              'dark:text-white text-black opacity-70 hover:opacity-100': !currentSections.includes(subSection.id),
-            }"
-            class="ml-4 text-wrap cursor-pointer animation-all duration-100"
-            @click.prevent="scrollToSection(subSection.id)"
-          >
-            {{ subSection.label }}
-          </a>
+
+      <template v-if="contentStore.sections.length > 0">
+        <p class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mt-5 mb-1">
+          Bu Sayfanın İçeriği
+        </p>
+        <div class="flex flex-col gap-0.5 border-l border-neutral-100 dark:border-neutral-800 pl-3">
+          <div v-for="section in contentStore.sections" :key="section.id" class="flex flex-col gap-0.5">
+            <a
+              :class="{
+                'text-[#E85D3E] dark:text-[#F47B5F] font-medium': currentSections.includes(section.id),
+                'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100': !currentSections.includes(section.id),
+              }"
+              class="cursor-pointer transition-colors py-0.5 text-xs leading-relaxed"
+              @click.prevent="scrollToSection(section.id)"
+            >
+              {{ section.label }}
+            </a>
+            <a
+              v-for="(subSection, key) in section.subSections"
+              :key="key"
+              :class="{
+                'text-[#E85D3E] dark:text-[#F47B5F] font-medium': currentSections.includes(subSection.id),
+                'text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100': !currentSections.includes(subSection.id),
+              }"
+              class="ml-3 cursor-pointer transition-colors py-0.5 text-xs leading-relaxed"
+              @click.prevent="scrollToSection(subSection.id)"
+            >
+              {{ subSection.label }}
+            </a>
+          </div>
         </div>
-      </div>
+      </template>
     </div>
     <slot />
   </div>

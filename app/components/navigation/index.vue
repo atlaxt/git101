@@ -43,31 +43,49 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="scrollContainer"
-    class="overflow-auto text-balance capitalize text-sm dark:text-white pr-2
-    [&::-webkit-scrollbar]:w-1
-    [&::-webkit-scrollbar-track]:rounded-full
-    [&::-webkit-scrollbar-track]:bg-gray-100
+    class="overflow-y-auto overflow-x-hidden w-full
+    [&::-webkit-scrollbar]:w-[3px]
+    [&::-webkit-scrollbar-track]:bg-transparent
     [&::-webkit-scrollbar-thumb]:rounded-full
-    [&::-webkit-scrollbar-thumb]:bg-gray-300
-    dark:[&::-webkit-scrollbar-track]:bg-neutral-800
-    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-600
-    "
+    [&::-webkit-scrollbar-thumb]:bg-neutral-200
+    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700"
   >
-    <div v-if="contentStore.navigation" class="w-full text-left flex text-wrap flex-col gap-3">
-      <a href="/" class="text-[#cf3d21] dark:text-[#D44A2F] text-lg"> Önsöz </a>
-      <div v-for="navigate in contentStore.navigation" :key="navigate.path" class="text-wrap flex flex-col">
-        <p class="text-[#cf3d21] dark:text-[#D44A2F] text-lg">
-          {{ navigate.title }}
-        </p>
+    <nav v-if="contentStore.navigation" class="flex flex-col pb-4">
+      <!-- Önsöz -->
+      <div class="mb-6">
+        <a
+          href="/"
+          class="block rounded-md px-2 py-1.5 text-sm transition-colors"
+          :class="$route.path === '/'
+            ? 'bg-orange-50 dark:bg-orange-950/30 text-[#E85D3E] dark:text-[#F47B5F] font-medium'
+            : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50'"
+        >
+          Önsöz
+        </a>
+      </div>
+
+      <!-- Sections -->
+      <div
+        v-for="navigate in contentStore.navigation"
+        :key="navigate.path"
+        class="mb-6"
+      >
+        <!-- Section header -->
+        <div class="flex items-center gap-2 px-2 mb-2">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 leading-none whitespace-nowrap">
+            {{ navigate.title }}
+          </span>
+          <div class="flex-1 h-px bg-neutral-100 dark:bg-neutral-800" />
+        </div>
+
+        <!-- Items — ml-3 ile section header'dan ayrışır -->
         <div
           v-for="page in navigate.children"
           :key="page.path"
-          class="border-l pl-4 ml-2 py-1 cursor-pointer
-          dark:text-neutral-300 dark:hover:text-neutral-200 text-neutral-700 hover:text-neutral-900
-          dark:border-neutral-700 border-neutral-300
-          "
+          class="ml-3 rounded-md px-2 py-1.5 text-sm cursor-pointer transition-colors"
           :class="{
-            'font-bold !text-black dark:!text-white dark:!border-white !border-black': page.path === $route.path,
+            'bg-orange-50 dark:bg-orange-950/30 text-[#E85D3E] dark:text-[#F47B5F] font-medium': page.path === $route.path,
+            'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50': page.path !== $route.path,
           }"
           @click="() => {
             navigateTo(page.path)
@@ -77,6 +95,6 @@ onBeforeUnmount(() => {
           {{ page.title }}
         </div>
       </div>
-    </div>
+    </nav>
   </div>
 </template>

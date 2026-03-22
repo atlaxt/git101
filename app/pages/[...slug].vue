@@ -33,7 +33,10 @@ watch(_navigation, (newNav) => {
     <ContentRenderer
       v-if="page"
       :value="page"
-      class="prose dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 min-w-full"
+      class="prose dark:prose-invert
+      prose-pre:bg-neutral-50 dark:prose-pre:bg-neutral-900/80
+      prose-neutral
+      min-w-full"
     />
   </NuxtLayout>
 </template>

@@ -4,23 +4,83 @@
 @source "../../../content/**/*";
 
 body {
-  @apply dark:bg-neutral-900 bg-neutral-100 overflow-y-auto;
+  font-family: Figtree, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  @apply dark:bg-neutral-950 bg-white antialiased overflow-y-auto text-neutral-900 dark:text-neutral-100;
 }
 
 html {
-  @apply scroll-smooth [&::-webkit-scrollbar]:w-1
-  [&::-webkit-scrollbar-track]:rounded-none
-  [&::-webkit-scrollbar-track]:bg-gray-100
-  [&::-webkit-scrollbar-thumb]:rounded-none
-  [&::-webkit-scrollbar-thumb]:bg-[#D44A2F]
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-[#D44A2F];
+  @apply scroll-smooth;
 }
 
-div {
-  font-family: Inter, sans-serif;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-200 dark:bg-neutral-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#E85D3E];
 }
 
+/* Prose link colors */
 .prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a, button a) {
-  @apply text-[#cf3d21] dark:text-[#D44A2F];
+  @apply text-[#E85D3E] dark:text-[#F47B5F] no-underline font-medium;
+}
+.prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a, button a):hover {
+  @apply underline;
+}
+
+/* Code blocks */
+.prose pre {
+  @apply border border-neutral-100 dark:border-neutral-800 !rounded-xl shadow-sm;
+}
+
+/* Inline code */
+.prose :not(pre) > code {
+  @apply bg-neutral-100 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 !rounded-md px-1.5 py-0.5 text-[0.83em] font-medium;
+}
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none !important;
+}
+
+/* Headings */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply dark:text-neutral-50 text-neutral-900 font-semibold tracking-tight;
+}
+
+.prose h2 {
+  @apply border-b border-neutral-100 dark:border-neutral-800 pb-2;
+}
+
+/* Blockquote */
+.prose blockquote {
+  @apply border-l-[#E85D3E] bg-orange-50/50 dark:bg-orange-950/20 rounded-r-lg px-4 not-italic;
+}
+.prose blockquote p {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+/* Tables */
+.prose table {
+  @apply text-sm;
+}
+.prose thead {
+  @apply bg-neutral-50 dark:bg-neutral-800/50;
+}
+.prose th {
+  @apply font-semibold text-neutral-700 dark:text-neutral-300;
+}
+
+/* Hr */
+.prose hr {
+  @apply border-neutral-100 dark:border-neutral-800;
 }

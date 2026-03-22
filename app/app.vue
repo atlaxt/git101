@@ -32,7 +32,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="sm:pb-10 nunito-sans">
+  <div class="sm:pb-10">
     <Html lang="tr" />
     <AppNavbar />
     <NuxtPage />
