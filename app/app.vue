@@ -35,7 +35,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="sm:pb-10">
+  <div>
     <Html lang="tr" />
     <Head>
       <Script type="application/ld+json">
@@ -43,10 +43,10 @@ useSeoMeta({
           JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
-            name: 'Git101 - Türkçe Git Eğitimi',
-            url: 'https://git101.atlaxt.me',
-            inLanguage: 'tr',
-            description: 'Git ve versiyon kontrolünü Türkçe öğrenin.',
+            "name": 'Git101 - Türkçe Git Eğitimi',
+            "url": 'https://git101.atlaxt.me',
+            "inLanguage": 'tr',
+            "description": 'Git ve versiyon kontrolünü Türkçe öğrenin.',
           })
         }}
       </Script>

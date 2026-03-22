@@ -3,6 +3,7 @@ const appConfig = useAppConfig()
 const links = [
   { icon: 'academicons:academia', text: 'Kaynağa Git', href: appConfig.links.sourceUrl },
   { icon: 'mdi:github', text: 'Siteyi Yıldızla', href: appConfig.links.repoGithub },
+  { icon: null, img: 'https://atlaxt.me/favicon.ico', text: 'Atlaxt', href: appConfig.links.portfolio },
 ]
 </script>
 
@@ -23,7 +24,8 @@ const links = [
         hover:bg-neutral-50 dark:hover:bg-neutral-800/50
         transition-all group"
       >
-        <Icon :name="link.icon" class="w-3.5 h-3.5 flex-shrink-0" />
+        <img v-if="link.img" :src="link.img" class="w-3.5 h-3.5 flex-shrink-0 rounded-sm" alt="">
+        <Icon v-else :name="link.icon!" class="w-3.5 h-3.5 flex-shrink-0" />
         <span>{{ link.text }}</span>
         <Icon name="lucide:arrow-up-right" class="w-2.5 h-2.5 ml-auto opacity-0 group-hover:opacity-50 transition-opacity" />
       </a>
